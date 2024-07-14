@@ -16,7 +16,6 @@ export default function Navbar() {
                 <li><a className='nav-links' href="#sale">SALE</a></li>
                 <li><a className='nav-links' href="#blog">BLOG</a></li>
                 <li><Link className='nav-links' to={'/LoginPage'}>LOGIN</Link></li>
-                <li><Link className='nav-links' to={'/RegisterPage'}>REGISTER</Link></li>
                 
             </ul>
     </nav> 

@@ -1,5 +1,8 @@
 import { initializeApp } from "firebase/app";
-
+import {getAuth ,  createUserWithEmailAndPassword ,  signInWithEmailAndPassword} from 'firebase/auth'
+import Swal from 'sweetalert2'
+import exclamationMark from '../Components/Assets/Exclamation Mark.avif'
+import tickMark from '../Components/Assets/Tick Mark.jpg'
 
 
 const firebaseConfig = {
@@ -13,3 +16,114 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
+const auth = getAuth(app)
+
+
+
+const register = (email:any , password:any)=>{
+  createUserWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    Swal.fire({
+      imageUrl: tickMark,
+      imageHeight: 200,
+      imageAlt: "Tick Mark",
+      title: "Successfully Registered!",
+      showClass: {
+        popup: `
+          animate__animated
+          animate__fadeInUp
+          animate__faster
+        `
+      },
+      hideClass: {
+        popup: `
+          animate__animated
+          animate__fadeOutDown
+          animate__faster
+        `
+      }
+    });
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    Swal.fire({
+      imageUrl: exclamationMark,
+      imageHeight: 100,
+      imageAlt: "Exclamation Mark",
+      title: errorMessage,
+      showClass: {
+        popup: `
+          animate__animated
+          animate__fadeInUp
+          animate__faster
+        `
+      },
+      hideClass: {
+        popup: `
+          animate__animated
+          animate__fadeOutDown
+          animate__faster
+        `
+      }
+    });
+  });  
+}
+
+
+
+const login = (email:any , password:any)=>{
+  signInWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    Swal.fire({
+      imageUrl: tickMark,
+      imageHeight: 200,
+      imageAlt: "Tick Mark",
+      title: "Successfully Logged In!",
+      showClass: {
+        popup: `
+          animate__animated
+          animate__fadeInUp
+          animate__faster
+        `
+      },
+      hideClass: {
+        popup: `
+          animate__animated
+          animate__fadeOutDown
+          animate__faster
+        `
+      }
+    });
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    Swal.fire({
+      imageUrl: exclamationMark,
+      imageHeight: 100,
+      imageAlt: "Exclamation Mark",
+      title: errorMessage,
+      showClass: {
+        popup: `
+          animate__animated
+          animate__fadeInUp
+          animate__faster
+        `
+      },
+      hideClass: {
+        popup: `
+          animate__animated
+          animate__fadeOutDown
+          animate__faster
+        `
+      }
+    });
+  });
+  
+}
+
+
+
+
+export {login,register}
