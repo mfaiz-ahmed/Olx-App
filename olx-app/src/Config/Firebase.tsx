@@ -3,6 +3,7 @@ import {getAuth ,  createUserWithEmailAndPassword ,  signInWithEmailAndPassword}
 import Swal from 'sweetalert2'
 import exclamationMark from '../Components/Assets/Exclamation Mark.avif'
 import tickMark from '../Components/Assets/Tick Mark.jpg'
+import 'animate.css';
 
 
 const firebaseConfig = {
@@ -31,14 +32,14 @@ const register = (email:any , password:any)=>{
       showClass: {
         popup: `
           animate__animated
-          animate__fadeInUp
+          animate__slideInLeft
           animate__faster
         `
       },
       hideClass: {
         popup: `
           animate__animated
-          animate__fadeOutDown
+          animate__slideOutRight
           animate__faster
         `
       }
@@ -55,14 +56,14 @@ const register = (email:any , password:any)=>{
       showClass: {
         popup: `
           animate__animated
-          animate__fadeInUp
+          animate__slideInLeft
           animate__faster
         `
       },
       hideClass: {
         popup: `
           animate__animated
-          animate__fadeOutDown
+          animate__slideOutRight
           animate__faster
         `
       }
@@ -83,14 +84,14 @@ const login = (email:any , password:any)=>{
       showClass: {
         popup: `
           animate__animated
-          animate__fadeInUp
+          animate__slideInLeft
           animate__faster
         `
       },
       hideClass: {
         popup: `
           animate__animated
-          animate__fadeOutDown
+          animate__slideOutRight
           animate__faster
         `
       }
@@ -107,14 +108,14 @@ const login = (email:any , password:any)=>{
       showClass: {
         popup: `
           animate__animated
-          animate__fadeInUp
+          animate__slideInLeft
           animate__faster
         `
       },
       hideClass: {
         popup: `
           animate__animated
-          animate__fadeOutDown
+          animate__slideOutRight
           animate__faster
         `
       }
