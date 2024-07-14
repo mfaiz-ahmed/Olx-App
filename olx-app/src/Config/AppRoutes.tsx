@@ -1,18 +1,23 @@
-import React from 'react'
-import {BrowserRouter , Routes , Route} from 'react-router-dom'
-import HomePage from '../Pages/HomePage'
-import Products from '../Components/Products'
-import ForgotPassword from '../Components/ForgotPassword'
+import { createBrowserRouter , RouterProvider } from "react-router-dom";
+import HomePage from "../Pages/HomePage";
+import LoginPage from "../Pages/LoginPage";
 
 
-export default function AppRoutes() {
-  return (
-    <BrowserRouter>
-    <Routes>
-      <Route path='*' element={<HomePage/>}/>
-      <Route path='productsPage' element={<Products/>}/>
-      <Route path='ForgotPasswordPage' element={<ForgotPassword/>}/>
-    </Routes>
-    </BrowserRouter>
-  )
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <HomePage/>
+  },
+  {
+    path: 'LoginPage',
+    element: <LoginPage />
+  }
+])
+
+
+
+
+export default function Rotuer(){
+  return <RouterProvider router={router} />
 }

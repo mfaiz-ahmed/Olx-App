@@ -82,13 +82,12 @@ font-size: 1.6rem;
 border: 0;
 background-color: #212529;
 color: white;
+margin-top: 2rem;
 transition: all 0.3s;}
 
 
 .button:hover{
-  background-color: white;
-  color: #212529;
-  border: 0.1rem solid #212529;
+  background-color: #72aec8;  
 }
 
 
