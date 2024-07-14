@@ -65,7 +65,7 @@ transition: all 0.3s;}
   
   
   .heading{text-align: center;
-  margin-top: 7rem;
+  margin-top: 10rem;
 margin-bottom: 5rem;
 font-size: 4rem;
 font-weight: 700;}
@@ -196,21 +196,12 @@ margin-top: 15rem;}
 .button2:hover{background-color: #72aec8;}
 
 
-.signup-box{display: flex;
+.register-box{display: flex;
   flex-flow: column;
   align-items: center;
   margin-bottom: 15rem;
   margin-top: 15rem;}
 
-
-
-  #forget{padding-top: 3rem;
-    font-size: 1.6rem;
-}
-
-
-
-#signup{margin-top: 2rem;}
 
 
 
