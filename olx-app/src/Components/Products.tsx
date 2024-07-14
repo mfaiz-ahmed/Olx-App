@@ -57,16 +57,16 @@ export default function Products() {
         {
             id:8,
             image: './ProductImages/Product-8.webp',
-            brand: 'HP',
-            model: 'Chromebook G8',
-            price: 10700
+            brand: 'Asus',
+            model: '24" LED Monitor',
+            price: 17000
         },
         {
             id:9,
             image: './ProductImages/Product-9.webp',
-            brand: 'Asus',
-            model: '24" LED Monitor',
-            price: 17000
+            brand: 'HP',
+            model: 'Chromebook G8',
+            price: 10700
         },
         {
             id:10,

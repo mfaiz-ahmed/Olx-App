@@ -12,7 +12,7 @@ export default function Navbar() {
             <ul className='d-flex gap-5'>
                 <li><Link className='nav-links' to={'/'}>HOME</Link></li>
                 <li><a className='nav-links' href="#services">SERVICES</a></li>
-                <li><a className='nav-links' href="#products">PRODUCTS</a></li>
+                <li><a className='nav-links' href="#products">PRODUCTS</a></li> 
                 <li><a className='nav-links' href="#sale">SALE</a></li>
                 <li><a className='nav-links' href="#blog">BLOG</a></li>
                 <li><Link className='nav-links' to={'/LoginPage'}>LOGIN</Link></li>
