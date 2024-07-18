@@ -3,7 +3,8 @@ import {getAuth ,  createUserWithEmailAndPassword ,  signInWithEmailAndPassword}
 import exclamationMark from '../Components/Assets/Exclamation Mark.avif'
 import tickMark from '../Components/Assets/Tick Mark.jpg'
 import 'animate.css';
-import swal from "sweetalert";
+import Swal from 'sweetalert2'
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyCg8i_dYRXGWRLeQpLybRNrwmlJMGD4Qek",
@@ -23,22 +24,22 @@ const auth = getAuth(app)
 const register = (email , password)=>{
   createUserWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
-    swal.fire({
+    Swal.fire({
       imageUrl: tickMark,
       imageHeight: 200,
-      imageAlt: "Tick Mark",
-      title: "Successfully Registered!",
+      imageAlt: "Tick Image",
+      title: "Registered Successfully",
       showClass: {
         popup: `
           animate__animated
-          animate__slideInLeft
+          animate__fadeInUp
           animate__faster
         `
       },
       hideClass: {
         popup: `
           animate__animated
-          animate__slideOutRight
+          animate__fadeOutDown
           animate__faster
         `
       }
@@ -47,22 +48,22 @@ const register = (email , password)=>{
   .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
-    swal.fire({
+    Swal.fire({
       imageUrl: exclamationMark,
-      imageHeight: 100,
-      imageAlt: "Exclamation Mark",
+      imageHeight: 200,
+      imageAlt: "Exclamation Image",
       title: errorMessage,
       showClass: {
         popup: `
           animate__animated
-          animate__slideInLeft
+          animate__fadeInUp
           animate__faster
         `
       },
       hideClass: {
         popup: `
           animate__animated
-          animate__slideOutRight
+          animate__fadeOutDown
           animate__faster
         `
       }
@@ -75,22 +76,22 @@ const register = (email , password)=>{
 const login = (email , password)=>{
   signInWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
-    swal.fire({
+    Swal.fire({
       imageUrl: tickMark,
       imageHeight: 200,
-      imageAlt: "Tick Mark",
-      title: "Successfully Logged In!",
+      imageAlt: "Tick Image",
+      title: "Logged In Successfully",
       showClass: {
         popup: `
           animate__animated
-          animate__slideInLeft
+          animate__fadeInUp
           animate__faster
         `
       },
       hideClass: {
         popup: `
           animate__animated
-          animate__slideOutRight
+          animate__fadeOutDown
           animate__faster
         `
       }
@@ -99,22 +100,22 @@ const login = (email , password)=>{
   .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
-    swal.fire({
+    Swal.fire({
       imageUrl: exclamationMark,
-      imageHeight: 100,
-      imageAlt: "Exclamation Mark",
+      imageHeight: 200,
+      imageAlt: "Exclamation Image",
       title: errorMessage,
       showClass: {
         popup: `
           animate__animated
-          animate__slideInLeft
+          animate__fadeInUp
           animate__faster
         `
       },
       hideClass: {
         popup: `
           animate__animated
-          animate__slideOutRight
+          animate__fadeOutDown
           animate__faster
         `
       }

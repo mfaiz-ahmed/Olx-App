@@ -24,7 +24,7 @@ export default function Navbar() {
           <li><a href="#">PRODUCTS</a></li>
           <li><a href="#">SALE</a></li>
           <li><a href="#">BLOG</a></li>
-          <li><Link to={'LoginPage'}>LOGIN</Link></li>
+          <li><Link to={'/LoginPage'}>LOGIN</Link></li>
         </ul>
         <ul>
           <li><img src={mainLogo} alt="Logo" /></li>
@@ -33,7 +33,7 @@ export default function Navbar() {
           <li className='hideOnMobile'><a href="#">PRODUCTS</a></li>
           <li className='hideOnMobile'><a href="#">SALE</a></li>
           <li className='hideOnMobile'><a href="#">BLOG</a></li>
-          <li className='hideOnMobile'><Link to={'LoginPage'}>LOGIN</Link></li>
+          <li className='hideOnMobile'><Link to={'/LoginPage'}>LOGIN</Link></li>
           <li className='menuButton' onClick={showSideBar}><a href="#"><i className="fa-solid fa-bars"></i></a></li>
         </ul>
       </nav>
