@@ -1,10 +1,9 @@
 import { initializeApp } from "firebase/app";
 import {getAuth ,  createUserWithEmailAndPassword ,  signInWithEmailAndPassword} from 'firebase/auth'
-import Swal from 'sweetalert2'
 import exclamationMark from '../Components/Assets/Exclamation Mark.avif'
 import tickMark from '../Components/Assets/Tick Mark.jpg'
 import 'animate.css';
-
+import swal from "sweetalert";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCg8i_dYRXGWRLeQpLybRNrwmlJMGD4Qek",
@@ -21,10 +20,10 @@ const auth = getAuth(app)
 
 
 
-const register = (email:any , password:any)=>{
+const register = (email , password)=>{
   createUserWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
-    Swal.fire({
+    swal.fire({
       imageUrl: tickMark,
       imageHeight: 200,
       imageAlt: "Tick Mark",
@@ -48,7 +47,7 @@ const register = (email:any , password:any)=>{
   .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
-    Swal.fire({
+    swal.fire({
       imageUrl: exclamationMark,
       imageHeight: 100,
       imageAlt: "Exclamation Mark",
@@ -73,10 +72,10 @@ const register = (email:any , password:any)=>{
 
 
 
-const login = (email:any , password:any)=>{
+const login = (email , password)=>{
   signInWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
-    Swal.fire({
+    swal.fire({
       imageUrl: tickMark,
       imageHeight: 200,
       imageAlt: "Tick Mark",
@@ -100,7 +99,7 @@ const login = (email:any , password:any)=>{
   .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
-    Swal.fire({
+    swal.fire({
       imageUrl: exclamationMark,
       imageHeight: 100,
       imageAlt: "Exclamation Mark",

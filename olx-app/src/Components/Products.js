@@ -96,7 +96,7 @@ export default function Products() {
     <>
          <h1 className='heading'>PRODUCTS</h1>
      <div id='products' className='mt-5 pt-5 container d-flex flex-wrap justify-content-center gap-5'>
-        {products.map((x:any , i:number)=>{
+        {products.map((x, i)=>{
             return <>
             <div key={i} className='border shadow box'>
                     <img width={'100%'} src={x.image} alt="Product Image" />
