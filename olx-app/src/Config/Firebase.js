@@ -28,18 +28,18 @@ const register = (email , password)=>{
       imageUrl: tickMark,
       imageHeight: 200,
       imageAlt: "Tick Image",
-      title: "Registered Successfully",
+      title: "Congratulations! You have successfully registered.",
       showClass: {
         popup: `
           animate__animated
-          animate__fadeInUp
+          animate__bounceInDown
           animate__faster
         `
       },
       hideClass: {
         popup: `
           animate__animated
-          animate__fadeOutDown
+          animate__bounceOutDown
           animate__faster
         `
       }
@@ -56,14 +56,14 @@ const register = (email , password)=>{
       showClass: {
         popup: `
           animate__animated
-          animate__fadeInUp
+          animate__bounceInDown
           animate__faster
         `
       },
       hideClass: {
         popup: `
           animate__animated
-          animate__fadeOutDown
+          animate__bounceOutDown
           animate__faster
         `
       }
@@ -80,18 +80,18 @@ const login = (email , password)=>{
       imageUrl: tickMark,
       imageHeight: 200,
       imageAlt: "Tick Image",
-      title: "Logged In Successfully",
+      title: "Login successful. Welcome aboard",
       showClass: {
         popup: `
           animate__animated
-          animate__fadeInUp
+          animate__bounceInDown
           animate__faster
         `
       },
       hideClass: {
         popup: `
           animate__animated
-          animate__fadeOutDown
+          animate__bounceOutDown
           animate__faster
         `
       }
@@ -108,14 +108,14 @@ const login = (email , password)=>{
       showClass: {
         popup: `
           animate__animated
-          animate__fadeInUp
+          animate__bounceInDown
           animate__faster
         `
       },
       hideClass: {
         popup: `
           animate__animated
-          animate__fadeOutDown
+          animate__bounceOutDown
           animate__faster
         `
       }
