@@ -17,8 +17,8 @@ export default function Register() {
     const navigate = useNavigate()
 
     const registerFunction = async ()=>{
-      await register(email , password)
       try{
+        await register(email , password)
         navigate('/')
         Swal.fire({
           imageUrl: tickMark,
