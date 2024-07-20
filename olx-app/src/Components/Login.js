@@ -15,9 +15,9 @@ export default function Login() {
   const navigate = useNavigate()
 
 
-  const loginFunction = ()=>{
-    login(email , password)
-    .then((userCredential) => {
+  const loginFunction = async ()=>{
+    await login(email , password)
+    try{
       navigate('/')
       Swal.fire({
         imageUrl: tickMark,
@@ -39,15 +39,12 @@ export default function Login() {
           `
         }
       });
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
+    } catch(e){
       Swal.fire({
         imageUrl: exclamationMark,
         imageHeight: 200,
         imageAlt: "Exclamation Image",
-        title: errorMessage,
+        title: e.message,
         showClass: {
           popup: `
             animate__animated
@@ -63,9 +60,8 @@ export default function Login() {
           `
         }
       });
-    });
-    
-  }
+    };
+    }
 
   return (
     <div className='text-center'>

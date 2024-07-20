@@ -16,15 +16,15 @@ export default function Register() {
     const [password , setPassword] = useState('')
     const navigate = useNavigate()
 
-    const registerFunction = ()=>{
-      register(email , password)
-      .then((userCredential) => {
+    const registerFunction = async ()=>{
+      await register(email , password)
+      try{
         navigate('/')
         Swal.fire({
           imageUrl: tickMark,
           imageHeight: 200,
           imageAlt: "Tick Image",
-          title: "Congratulations! You have successfully registered.",
+          title: "Login successful. Welcome aboard",
           showClass: {
             popup: `
               animate__animated
@@ -40,15 +40,12 @@ export default function Register() {
             `
           }
         });
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
+      } catch(e){
         Swal.fire({
           imageUrl: exclamationMark,
           imageHeight: 200,
           imageAlt: "Exclamation Image",
-          title: errorMessage,
+          title: e.message,
           showClass: {
             popup: `
               animate__animated
@@ -64,7 +61,7 @@ export default function Register() {
             `
           }
         });
-      });
+      };
     }
 
   return (
