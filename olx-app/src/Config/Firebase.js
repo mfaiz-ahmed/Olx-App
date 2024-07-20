@@ -1,9 +1,5 @@
 import { initializeApp } from "firebase/app";
 import {getAuth ,  createUserWithEmailAndPassword ,  signInWithEmailAndPassword} from 'firebase/auth'
-import exclamationMark from '../Components/Assets/Exclamation Mark.avif'
-import tickMark from '../Components/Assets/Tick Mark.jpg'
-import 'animate.css';
-import Swal from 'sweetalert2'
 
 
 const firebaseConfig = {
@@ -17,110 +13,19 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-const auth = getAuth(app)
+const auth = getAuth(app) 
 
 
 
 const register = (email , password)=>{
-  createUserWithEmailAndPassword(auth, email, password)
-  .then((userCredential) => {
-    Swal.fire({
-      imageUrl: tickMark,
-      imageHeight: 200,
-      imageAlt: "Tick Image",
-      title: "Congratulations! You have successfully registered.",
-      showClass: {
-        popup: `
-          animate__animated
-          animate__bounceInDown
-          animate__faster
-        `
-      },
-      hideClass: {
-        popup: `
-          animate__animated
-          animate__bounceOutDown
-          animate__faster
-        `
-      }
-    });
-  })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    Swal.fire({
-      imageUrl: exclamationMark,
-      imageHeight: 200,
-      imageAlt: "Exclamation Image",
-      title: errorMessage,
-      showClass: {
-        popup: `
-          animate__animated
-          animate__bounceInDown
-          animate__faster
-        `
-      },
-      hideClass: {
-        popup: `
-          animate__animated
-          animate__bounceOutDown
-          animate__faster
-        `
-      }
-    });
-  });  
+  return createUserWithEmailAndPassword(auth, email, password)
+  
 }
 
 
 
 const login = (email , password)=>{
-  signInWithEmailAndPassword(auth, email, password)
-  .then((userCredential) => {
-    Swal.fire({
-      imageUrl: tickMark,
-      imageHeight: 200,
-      imageAlt: "Tick Image",
-      title: "Login successful. Welcome aboard",
-      showClass: {
-        popup: `
-          animate__animated
-          animate__bounceInDown
-          animate__faster
-        `
-      },
-      hideClass: {
-        popup: `
-          animate__animated
-          animate__bounceOutDown
-          animate__faster
-        `
-      }
-    });
-  })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    Swal.fire({
-      imageUrl: exclamationMark,
-      imageHeight: 200,
-      imageAlt: "Exclamation Image",
-      title: errorMessage,
-      showClass: {
-        popup: `
-          animate__animated
-          animate__bounceInDown
-          animate__faster
-        `
-      },
-      hideClass: {
-        popup: `
-          animate__animated
-          animate__bounceOutDown
-          animate__faster
-        `
-      }
-    });
-  });
+ return signInWithEmailAndPassword(auth, email, password)
   
 }
 
