@@ -9,11 +9,11 @@ import { useNavigate } from 'react-router-dom';
 
 export default function Register() {
 
-    const [fullName , setFullName] = useState('')
-    const [email , setEmail] = useState('')
-    const [birthDate , setBirthDate] = useState('')
-    const [phoneNumber , setPhoneNumber] = useState('')
-    const [password , setPassword] = useState('')
+    const [fullName , setFullName] = useState()
+    const [email , setEmail] = useState()
+    const [birthDate , setBirthDate] = useState()
+    const [phoneNumber , setPhoneNumber] = useState()
+    const [password , setPassword] = useState()
     const navigate = useNavigate()
 
     const registerFunction = async ()=>{

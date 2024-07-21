@@ -40,15 +40,15 @@ const login = (email , password)=>{
 }
 
 
-const addProduct = async (products)=>{
-  const {title , brand , category , details , image , price} = products
-  const storageRef = ref(storage, `products/${image.name}`);  
+const addProduct = async (product)=>{
+  const {title , brand , category , details , image , price} = product
+  const storageRef = ref(storage, `product/${image.name}`);  
   
   await uploadBytes(storageRef, image)
   
   const url = await getDownloadURL(storageRef)
 
-return addDoc(collection(db, "product"), {title , brand , category , details  , price , image:url});
+return addDoc(collection(db, "products"), {title , brand , category , details  , price , image:url});
  }
 
 
