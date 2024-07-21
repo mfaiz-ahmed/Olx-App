@@ -17,7 +17,7 @@ export default function AddProduct() {
 
     const postProduct = async ()=>{
       try{
-        await addProduct({title , brand , category , details , price})
+        await addProduct({title , brand , category , details , image , price})
         Swal.fire({
           imageUrl: tickMark,
           imageHeight: 200,

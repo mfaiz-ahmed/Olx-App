@@ -1,6 +1,8 @@
 import { initializeApp } from "firebase/app";
 import {getAuth ,  createUserWithEmailAndPassword ,  signInWithEmailAndPassword} from 'firebase/auth'
 import { getFirestore , collection, addDoc } from "firebase/firestore";
+import { getStorage, ref, uploadBytes , getDownloadURL  } from "firebase/storage";
+
 
 
 
@@ -17,6 +19,8 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app) 
 const db = getFirestore(app);
+const storage = getStorage(app);
+
 
 
 
@@ -36,9 +40,15 @@ const login = (email , password)=>{
 }
 
 
-const addProduct = (products)=>{
-  const {title , brand , category , details  , price} = products
-return addDoc(collection(db, "product"), {title , brand , category , details  , price});
+const addProduct = async (products)=>{
+  const {title , brand , category , details , image , price} = products
+  const storageRef = ref(storage, `products/${image.name}`);  
+  
+  await uploadBytes(storageRef, image)
+  
+  const url = await getDownloadURL(storageRef)
+
+return addDoc(collection(db, "product"), {title , brand , category , details  , price , image:url});
  }
 
 
