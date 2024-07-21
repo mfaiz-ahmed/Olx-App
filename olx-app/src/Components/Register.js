@@ -18,13 +18,13 @@ export default function Register() {
 
     const registerFunction = async ()=>{
       try{
-        await register(email , password)
+        await register({email , password , fullName , birthDate , phoneNumber})
         navigate('/')
         Swal.fire({
           imageUrl: tickMark,
           imageHeight: 200,
           imageAlt: "Tick Image",
-          title: "Login successful. Welcome aboard",
+          title: "You’re officially registered!",
           showClass: {
             popup: `
               animate__animated
