@@ -36,6 +36,11 @@ const login = (email , password)=>{
 }
 
 
+const addProduct = (products)=>{
+  const {title , brand , category , details  , price} = products
+return addDoc(collection(db, "product"), {title , brand , category , details  , price});
+ }
 
 
-export {login,register}
+
+export {login,register , addProduct }

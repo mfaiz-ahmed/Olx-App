@@ -274,3 +274,8 @@ margin-top: 15rem;}
   align-items: center;
   margin-bottom: 15rem;
   margin-top: 15rem;}
+
+.addproduct-box{display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin-bottom: 10rem;}

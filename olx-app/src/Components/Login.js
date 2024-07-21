@@ -9,7 +9,6 @@ import Swal from 'sweetalert2'
 
 export default function Login() {
 
-  const [fullName , setFullName] = useState('')
   const [email , setEmail] = useState('')
   const [password , setPassword] = useState('')
   const navigate = useNavigate()
@@ -64,10 +63,9 @@ export default function Login() {
     }
 
   return (
-    <div className='text-center'>
+    <div>
     <h1 className='heading'>LOGIN</h1>
     <div className='login-box'>
-        <input onChange={e=> setFullName(e.target.value)} className='input' type="text" placeholder='Enter Full Name...' />
         <input onChange={e=> setEmail(e.target.value)} className='input' type="email" placeholder='Enter Email...' />
         <input onChange={e=> setPassword(e.target.value)} className='input' type="password" placeholder='Enter Password...' />
         <button onClick={loginFunction} className='button2'>LOGIN</button>

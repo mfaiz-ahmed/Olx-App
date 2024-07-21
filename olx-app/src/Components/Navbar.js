@@ -34,6 +34,7 @@ export default function Navbar() {
           <li className='hideOnMobile'><a href="#">SALE</a></li>
           <li className='hideOnMobile'><a href="#">BLOG</a></li>
           <li className='hideOnMobile'><Link to={'/LoginPage'}>LOGIN</Link></li>
+          <li className='hideOnMobile'><Link to={'/AddProductPage'}>POST</Link></li>
           <li className='menuButton' onClick={showSideBar}><a href="#"><i className="fa-solid fa-bars"></i></a></li>
         </ul>
       </nav>
