@@ -12,9 +12,8 @@ import Insta5 from './Assets/insta-item5.jpg'
 
 export default function Blog() {
   return (
-    <>
-    <div>
-     <h1 id='blog' className='heading'>LATEST POSTS</h1> 
+    <div id='blog'>
+     <h1 className='heading'>LATEST POSTS</h1> 
     <div className='d-flex justify-content-center'>
     <div>
         <img className='post-img' src={Post1} alt="post 1" />
@@ -49,6 +48,5 @@ export default function Blog() {
       </div>
     </div>
 </div>
-  </>
   )
 }

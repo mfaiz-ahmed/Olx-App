@@ -20,11 +20,11 @@ export default function Footer() {
       <div className='basis'>
         <h3 className='ms-4'>QUICK LINKS </h3>
         <ul className='mt-5'>
-                <li className='fs-4'><a className='nav-links' href="#">HOME</a></li>
-                <li className='mt-4 fs-4'><a className='nav-links' href="#services">SERVICES</a></li>
+                <li className='fs-4'><a className='nav-links hover' href="#">HOME</a></li>
+                <li className='mt-4 fs-4'><a className='nav-links hover' href="#services">SERVICES</a></li>
                 <li className='mt-4 fs-4'><a className='nav-links' href="#products">PRODUCTS</a></li>
-                <li className='mt-4 fs-4'><a className='nav-links' href="#sale">SALE</a></li>
-                <li className='mt-4 fs-4'><a className='nav-links' href="#blog">BLOG</a></li>
+                <li className='mt-4 fs-4'><a className='nav-links hover' href="#sale">SALE</a></li>
+                <li className='mt-4 fs-4'><a className='nav-links hover' href="#blog">BLOG</a></li>
             </ul>
       </div>
       <div className='basis'>

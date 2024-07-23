@@ -36,7 +36,6 @@ const register = async (userInfo)=>{
 
 const login = (email , password)=>{
  return signInWithEmailAndPassword(auth, email, password)
-  
 }
 
 

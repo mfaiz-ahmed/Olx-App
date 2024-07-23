@@ -93,9 +93,9 @@ export default function Products() {
 
 
   return (
-    <>
-         <h1 className='heading'>PRODUCTS</h1>
-     <div id='products' className='mt-5 pt-5 container d-flex flex-wrap justify-content-center gap-5'>
+    <div id='products'>
+    <h1 id='products' className='heading'>PRODUCTS</h1>
+     <div className='mt-5 pt-5 container d-flex flex-wrap justify-content-center gap-5'>
         {products.map((x, i)=>{
             return <>
             <div key={i} className='border shadow box'>
@@ -107,6 +107,7 @@ export default function Products() {
             </>
         })}
         </div> 
-    </>
+        </div>
+
   )
 }
