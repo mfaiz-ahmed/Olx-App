@@ -279,3 +279,19 @@ margin-top: 15rem;}
   flex-flow: column;
   align-items: center;
   margin-bottom: 10rem;}
+
+
+::-webkit-scrollbar{
+  width: 5px;
+}
+
+::-webkit-scrollbar-track{
+  background-color: rgba(255, 255, 255, 5.96);
+  border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-thumb{
+  background-color: #72aec8;
+  border-radius: 10px;
+}
