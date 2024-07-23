@@ -1,7 +1,7 @@
 import { initializeApp } from "firebase/app";
-import {getAuth ,  createUserWithEmailAndPassword ,  signInWithEmailAndPassword} from 'firebase/auth'
+import {getAuth ,  createUserWithEmailAndPassword ,  signInWithEmailAndPassword , onAuthStateChanged} from 'firebase/auth'
 import { getFirestore , collection, addDoc } from "firebase/firestore";
-import { getStorage, ref, uploadBytes , getDownloadURL  } from "firebase/storage";
+import { getStorage, ref, uploadBytes , getDownloadURL } from "firebase/storage";
 
 
 
@@ -52,4 +52,8 @@ return addDoc(collection(db, "products"), {title , brand , category , details  ,
 
 
 
-export {login,register , addProduct }
+export {login,
+  register,
+  addProduct,
+  auth,
+  onAuthStateChanged }
