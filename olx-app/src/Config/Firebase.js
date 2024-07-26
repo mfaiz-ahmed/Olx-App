@@ -1,7 +1,7 @@
 import { initializeApp } from "firebase/app";
 import {getAuth ,  createUserWithEmailAndPassword ,  signInWithEmailAndPassword , onAuthStateChanged} from 'firebase/auth'
-import { getFirestore , collection, addDoc } from "firebase/firestore";
-import { getStorage, ref, uploadBytes , getDownloadURL } from "firebase/storage";
+import { getFirestore , collection, addDoc , getDocs , getDoc , doc} from "firebase/firestore";
+import { getStorage, ref, uploadBytes , getDownloadURL} from "firebase/storage";
 
 
 
@@ -47,6 +47,7 @@ const addProduct = async (product)=>{
   
   const url = await getDownloadURL(storageRef)
 
+  
 return addDoc(collection(db, "products"), {title , brand , category , details  , price , image:url});
  }
 
@@ -56,4 +57,9 @@ export {login,
   register,
   addProduct,
   auth,
-  onAuthStateChanged }
+  onAuthStateChanged,
+  getDocs,
+  collection,
+  db,
+  doc,
+  getDoc}

@@ -46,6 +46,7 @@ export default function Navbar() {
           <li><a href="#sale">SALE</a></li>
           <li><a href="#blog">BLOG</a></li>
           <li><Link to={'/LoginPage'}>LOGIN</Link></li>
+          <li><Link to={'/AddProductPage'}>POST</Link></li>
         </ul>
         <ul>
           <li><img src={mainLogo} alt="Logo" /></li>
