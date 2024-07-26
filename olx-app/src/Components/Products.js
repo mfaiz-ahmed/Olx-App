@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { db , getDocs , collection } from '../Config/Firebase'
-import { doc } from 'firebase/firestore'
 import { useNavigate } from 'react-router-dom'
 
 
 
 export default function Products() {
 
-    const navigate = useNavigate()
     const [products , setProducts] = useState([])
 
 
@@ -26,10 +24,6 @@ export default function Products() {
     } , [])
 
 
-    const goToDetails = (item)=>{
-        navigate(`/Detail/${item.id}`)
-    }
-
 
   return (
     <div id='products'>
@@ -42,9 +36,7 @@ export default function Products() {
                 <p><span className="fw-bolder">Brand:</span> {item.brand}</p>
                 <p><span className="fw-bolder">Title:</span> {item.title}</p>
                       <p><span className="fw-bolder">Category:</span> {item.category}</p>
-                      <p className='fs-5'><span className="fw-bolder">Details:</span> {item.details}</p>
                       <p><span className="fw-bolder">Price:</span> Rs. {item.price} </p>
-                      <button onClick={goToDetails }>Details</button>
             </div>
             )
         })}
@@ -54,3 +46,4 @@ export default function Products() {
 
   )
 }
+
