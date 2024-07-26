@@ -3,7 +3,6 @@ import HomePage from "../Pages/HomePage";
 import LoginPage from "../Pages/LoginPage";
 import RegisterPage from "../Pages/RegisterPage";
 import PostPage from "../Pages/PostPage";
-import ProductDetail from "../Components/ProductDetail";
 
 
 
@@ -23,10 +22,6 @@ const router = createBrowserRouter([
   {
     path: '/AddProductPage',
     element: <PostPage />
-  },
-  {
-    path: '/Detail/:id',
-    element: <ProductDetail />
   }
 ])
 
