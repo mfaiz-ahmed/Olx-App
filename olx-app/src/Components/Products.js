@@ -25,6 +25,12 @@ export default function Products() {
         
     } , [])
 
+
+    const goToDetails = (item)=>{
+        navigate(`/Detail/${item.id}`)
+    }
+
+
   return (
     <div id='products'>
     <h1 id='products' className='heading'>PRODUCTS</h1>
@@ -34,8 +40,11 @@ export default function Products() {
                 <div key={id    } className='border shadow box'>
                     <img width={'100%'} src={item.image} alt="Product Image" />
                 <p><span className="fw-bolder">Brand:</span> {item.brand}</p>
-                      <p><span className="fw-bolder">Model:</span> {item.model}</p>
+                <p><span className="fw-bolder">Title:</span> {item.title}</p>
+                      <p><span className="fw-bolder">Category:</span> {item.category}</p>
+                      <p className='fs-5'><span className="fw-bolder">Details:</span> {item.details}</p>
                       <p><span className="fw-bolder">Price:</span> Rs. {item.price} </p>
+                      <button onClick={goToDetails }>Details</button>
             </div>
             )
         })}

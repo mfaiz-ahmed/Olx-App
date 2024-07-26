@@ -49,6 +49,7 @@ const addProduct = async (product)=>{
 
   
 return addDoc(collection(db, "products"), {title , brand , category , details  , price , image:url});
+
  }
 
 
