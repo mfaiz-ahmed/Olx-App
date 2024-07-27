@@ -8,11 +8,11 @@ import PostPage from "../Pages/PostPage";
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: '/HomePage',
     element: <HomePage/>
   },
   {
-    path: '/LoginPage',
+    path: '/',
     element: <LoginPage />
   },
   {

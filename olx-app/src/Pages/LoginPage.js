@@ -6,9 +6,7 @@ import Footer from '../Components/Footer'
 export default function LoginPage() {
   return (
     <>
-    <Navbar />
     <Login />
-    <Footer />
     </>
   )
 }

@@ -17,7 +17,7 @@ export default function Login() {
   const loginFunction = async ()=>{
     try{
       await login(email , password)
-      navigate('/')
+      navigate('/HomePage')
       Swal.fire({
         imageUrl: tickMark,
         imageHeight: 200,
