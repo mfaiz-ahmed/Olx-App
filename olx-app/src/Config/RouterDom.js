@@ -9,11 +9,11 @@ import ProductDetailPage from "../Pages/ProductDetailPage";
 
 const router = createBrowserRouter([
   {
-    path: '/HomePage',
+    path: '/',
     element: <HomePage/>
   },
   {
-    path: '/',
+    path: '/LoginPage',
     element: <LoginPage />
   },
   {

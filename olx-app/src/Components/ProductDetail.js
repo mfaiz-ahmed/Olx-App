@@ -31,8 +31,8 @@ export default function ProductDetail() {
       <div className="ms-5">
         <h1><span className='fw-bolder'>Brand:</span> {model.brand}</h1>
         <h1 className='mt-5'><span className='fw-bolder'>Title:</span> {model.title}</h1>
-        <h3 className="mt-5"><span className='fw-bolder'>Category:</span> {model.category}</h3>
-        <h2 className="my-5"><span className='fw-bolder'>Category:</span> {model.details}</h2>
+        <h1 className="mt-5"><span className='fw-bolder'>Category:</span> {model.category}</h1>
+        <h2 className="my-5"><span className='fw-bolder'>Details:</span> {model.details}</h2>
         <h2 className="fw-bolder">Price: Rs. {model.price}</h2>
         <div className="text-center">
         </div>
