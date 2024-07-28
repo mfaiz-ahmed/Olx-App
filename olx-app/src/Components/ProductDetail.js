@@ -29,8 +29,9 @@ export default function ProductDetail() {
         <img className="border shadow p-4" width={500} src={model.image} alt="Product Image" />
       </div>
       <div className="ms-5">
-        <h1>{model.title}</h1>
-        <h3 className="mt-5 capital">{model.category}</h3>
+        <h1 className='fw-bolder'>{model.brand}</h1>
+        <h1 className='mt-5 fw-bolder'>{model.title}</h1>
+        <h3 className="mt-5 fw-bolder">{model.category}</h3>
         <h2 className="my-5">{model.details}</h2>
         <h2 className="fw-bolder">Price: Rs.{model.price}</h2>
         <div className="text-center">
