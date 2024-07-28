@@ -3,7 +3,7 @@ import HomePage from "../Pages/HomePage";
 import LoginPage from "../Pages/LoginPage";
 import RegisterPage from "../Pages/RegisterPage";
 import PostPage from "../Pages/PostPage";
-import ProductDetail from "../Components/ProductDetail";
+import ProductDetailPage from "../Pages/ProductDetailPage";
 
 
 
@@ -26,7 +26,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/Detail/:id',
-    element: <ProductDetail />
+    element: <ProductDetailPage />
   }
 ])
 

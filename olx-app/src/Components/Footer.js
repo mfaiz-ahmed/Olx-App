@@ -22,7 +22,7 @@ export default function Footer() {
         <ul className='mt-5'>
                 <li className='fs-4'><a className='nav-links hover' href="#">HOME</a></li>
                 <li className='mt-4 fs-4'><a className='nav-links hover' href="#services">SERVICES</a></li>
-                <li className='mt-4 fs-4'><a className='nav-links' href="#products">PRODUCTS</a></li>
+                <li className='mt-4 fs-4'><a className='nav-links hover' href="#products">PRODUCTS</a></li>
                 <li className='mt-4 fs-4'><a className='nav-links hover' href="#sale">SALE</a></li>
                 <li className='mt-4 fs-4'><a className='nav-links hover' href="#blog">BLOG</a></li>
             </ul>

@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { getDoc , doc , db } from '../Config/Firebase'
-import { useNavigate, useParams } from 'react-router-dom'
+import {useParams} from 'react-router-dom'
 
 export default function ProductDetail() {
   
-  const navigate = useNavigate()
   const params = useParams()
   const [model , setModel] = useState({})
 
@@ -24,7 +23,7 @@ export default function ProductDetail() {
   } , [params.id])
 
   return (
-    <div className="container">
+    <div className="container mt-5 pt-5 mb-5 pb-5 ">
     <div className="container d-flex mt-5 p-5 border shadow">
       <div>
         <img className="border shadow p-4" width={500} src={model.image} alt="Product Image" />
