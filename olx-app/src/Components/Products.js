@@ -34,13 +34,12 @@ const goToDetail = (item)=>{
      <div className='mt-5 pt-5 container d-flex flex-wrap justify-content-center gap-5'>
         {products.map((item)=>{
             return (
-                <div key={item.id} className='border shadow box'>
+                <div onClick={()=>{goToDetail(item)}} key={item.id} className='border shadow box'>
                     <img width={'100%'} src={item.image} alt="Product Image" />
                 <p><span className="fw-bolder">Brand:</span> {item.brand}</p>
                 <p><span className="fw-bolder">Title:</span> {item.title}</p>
                       <p><span className="fw-bolder">Category:</span> {item.category}</p>   
                       <p><span className="fw-bolder">Price:</span> Rs. {item.price}</p>
-                      <button className='button3' onClick={()=>{goToDetail(item)}}>Details</button>
             </div>
             )
         })}

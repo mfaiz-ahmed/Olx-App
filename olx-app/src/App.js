@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import store from './Redux/index'
+import { Provider } from 'react-redux';
 import Router from './Config/RouterDom'
 
 
@@ -8,9 +10,9 @@ import Router from './Config/RouterDom'
 
 function App() {
   return (
-    <div>
+    <Provider store={store}>
       <Router />
-    </div>
+    </Provider>
   );
 }
 

@@ -129,7 +129,12 @@ color: #AEAEAE;}
   padding: 1.5rem;
   border-radius: 2rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-cursor: pointer;}
+cursor: pointer;
+transition: 0.3s ease-in-out}
+
+.box:hover{
+  transform: scale(1.1);
+}
 
   
   
@@ -264,17 +269,6 @@ margin-top: 15rem;}
 
 .button2:hover{background-color: #72aec8;}
 
-
-.button3{padding: 1rem 3rem;
-  font-size: 1.6rem;
-  border: 0;
-  background-color: #212529;
-  color: white;
-  width: 100%;
-  margin-top: 5rem;
-  transition: all 0.3s;}
-
-.button3:hover{background-color: #72aec8;}
 
 
 .register-box{display: flex;
