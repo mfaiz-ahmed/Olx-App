@@ -19,7 +19,7 @@ export default function Register() {
     const registerFunction = async ()=>{
       try{
         await register({email , password , fullName , birthDate , phoneNumber})
-        navigate('/HomePage ')
+        navigate('/HomePage')
         Swal.fire({
           imageUrl: tickMark,
           imageHeight: 200,
