@@ -1,9 +1,10 @@
 import React from 'react';
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import store from './Redux'
-import { Provider } from 'react-redux';
+import 'bootstrap/dist/css/bootstrap.min.css';  
 import Router from './Config/RouterDom'
+import { Provider } from 'react-redux';
+import store from './Store';
+
 
 
 

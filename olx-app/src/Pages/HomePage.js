@@ -7,16 +7,14 @@ import Blog from "../Components/Blog";
 import Footer from "../Components/Footer";
 import { useSelector } from "react-redux";
 
-export default function HomePage() {
-  const color = useSelector((state) => state.color);
-  console.log(color);
 
+export default function HomePage() {
+
+  const color = useSelector(state =>state.color)
   return (
-    <div
-      style={{
-        backgroundColor: color
-      }}
-    >
+    <div style={{
+      backgroundColor : color
+    }}>
       <Navbar />
       <Carousel />
       <Services />
