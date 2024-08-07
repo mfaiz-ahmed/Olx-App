@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { getDoc , doc , db } from '../Config/Firebase'
 import {useParams} from 'react-router-dom'
 
+
 export default function ProductDetail() {
   
   const params = useParams()
