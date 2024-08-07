@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import mainLogo from './Assets/main-logo.png'
 import {Link} from 'react-router-dom'
 import { auth , onAuthStateChanged } from '../Config/Firebase'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { setTheme } from '../Store/ThemeSlice'
 
 
@@ -37,6 +37,7 @@ export default function Navbar() {
   } , [])
 
 const dispatch = useDispatch()
+const cart = useSelector(state =>state.cart)
 
   return (
     <>
@@ -59,7 +60,9 @@ const dispatch = useDispatch()
           <li className='hideOnMobile'><a href="#sale">SALE</a></li>
           <li className='hideOnMobile'><a href="#blog">BLOG</a></li>
           <li className='hideOnMobile'><Link to={'/AddProductPage'}>POST</Link></li>
-          <li onClick={()=>dispatch(setTheme('black'))}><a href='#'>THEME</a></li>
+          <li onClick={()=>dispatch(setTheme('black'))}><a href='#'>DARK</a></li>
+          <li onClick={()=>dispatch(setTheme('white'))}><a href='#'>LIGHT</a></li>
+          <li><a href='#'><i class="fa-solid fa-cart-shopping"></i> <span className='itemsNumber'>{cart.length}</span></a></li>
           <li className='hideOnMobile'><a href="#">{users?.email}</a></li>
           <li className='menuButton' onClick={showSideBar}><a href="#"><i className="fa-solid fa-bars"></i></a></li>
         </ul>
