@@ -4,10 +4,11 @@ import {useParams} from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { addToCart } from '../Store/CartSlice'
 
+
 export default function ProductDetail() {
   
   const params = useParams()
-  const [model , setModel] = useState({})
+  const [product , setProduct] = useState({})
 
 
   useEffect(()=>{
@@ -15,7 +16,7 @@ export default function ProductDetail() {
       const singleProduct = doc(db , 'products' , params.id)
       const result = await getDoc(singleProduct)
       if(result){
-        setModel(result.data())
+        setProduct(result.data())
       }
       else{
         console.log('No Data Found');
@@ -30,15 +31,15 @@ export default function ProductDetail() {
     <div className="container mt-5 pt-5 mb-5 pb-5">
     <div className="container d-flex mt-5 p-5 border shadow">
       <div>
-        <img className="border shadow p-4" width={500} src={model.image} alt="Product Image" />
+        <img className="border shadow p-4" width={500} src={product.image} alt="Product Image" />
       </div>
       <div className="ms-5">
-        <h1><span className='fw-bolder'>Brand:</span> {model.brand}</h1>
-        <h1 className='mt-5'><span className='fw-bolder'>Title:</span> {model.title}</h1>
-        <h1 className="mt-5"><span className='fw-bolder'>Category:</span> {model.category}</h1>
-        <h2 className="my-5"><span className='fw-bolder'>Details:</span> {model.details}</h2>
-        <h2 className="fw-bolder">Price: Rs. {model.price}</h2>
-        <button onClick={()=>dispatch(addToCart(model))} className='button3'>ADD TO CART</button>
+        <h1><span className='fw-bolder'>Brand:</span> {product.brand}</h1>
+        <h1 className='mt-5'><span className='fw-bolder'>Title:</span> {product.title}</h1>
+        <h1 className="mt-5"><span className='fw-bolder'>Category:</span> {product.category}</h1>
+        <h2 className="my-5"><span className='fw-bolder'>Details:</span> {product.details}</h2>
+        <h2 className="fw-bolder">Price: Rs. {product.price}</h2>
+        <button className='button3' onClick={()=> dispatch(addToCart(product))}>ADD TO CART</button>
         <div className="text-center">
         </div>
         </div>
