@@ -4,7 +4,6 @@ import {useParams} from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { addToCart } from '../Store/CartSlice'
 
-
 export default function ProductDetail() {
   
   const params = useParams()
@@ -25,7 +24,7 @@ export default function ProductDetail() {
     getProductData()
   } , [params.id])
 
-  const dispatch = useDispatch()
+const dispatch = useDispatch()
 
   return (
     <div className="container mt-5 pt-5 mb-5 pb-5">
@@ -39,7 +38,7 @@ export default function ProductDetail() {
         <h1 className="mt-5"><span className='fw-bolder'>Category:</span> {product.category}</h1>
         <h2 className="my-5"><span className='fw-bolder'>Details:</span> {product.details}</h2>
         <h2 className="fw-bolder">Price: Rs. {product.price}</h2>
-        <button className='button3' onClick={()=> dispatch(addToCart(product))}>ADD TO CART</button>
+        <button onClick={()=>dispatch(addToCart(product))} className='button3'>ADD TO CART</button>
         <div className="text-center">
         </div>
         </div>
