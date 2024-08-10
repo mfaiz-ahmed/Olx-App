@@ -4,6 +4,7 @@ import exclamationMark from '../Components/Assets/Exclamation Mark.avif'
 import tickMark from '../Components/Assets/Tick Mark.jpg'
 import 'animate.css';
 import Swal from 'sweetalert2'
+import { useNavigate } from 'react-router-dom';
 
 
 export default function AddProduct() {
@@ -14,10 +15,12 @@ export default function AddProduct() {
     const [details , setDetails] = useState()
     const [image , setImage] = useState()
     const [price , setPrice] = useState()
+    const navigate = useNavigate()
 
     const postProduct = async ()=>{
       try{
         await addProduct({title , brand , category , details , image , price})
+        navigate('/HomePage')   
         Swal.fire({
           imageUrl: tickMark,
           imageHeight: 200,

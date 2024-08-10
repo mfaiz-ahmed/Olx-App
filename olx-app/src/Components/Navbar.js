@@ -18,6 +18,7 @@ export default function Navbar() {
     sideBar.style.display = 'none'
   }
 
+
   const [users , setUsers] = useState()
 
   useEffect(()=>{
@@ -34,6 +35,7 @@ export default function Navbar() {
 const dispatch = useDispatch()
 
 const cart = useSelector(state =>state.cart)
+
 
   return (
     <>
@@ -68,4 +70,5 @@ const cart = useSelector(state =>state.cart)
     </>
   )
 }
+
 
