@@ -314,7 +314,7 @@ nav a:hover {
   border: 0;
   background-color: #212529;
   color: white;
-  width: 100%;
+  width: 45vw;
   margin-top: 5rem;
   transition: all 0.3s;
 }

@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom'
 import { auth , onAuthStateChanged } from '../Config/Firebase'
 import { useDispatch, useSelector} from 'react-redux'
 import { setTheme } from '../Store/ThemeSlice'
+import CartPopup from './CartPopup'
 
 
 export default function Navbar() {
@@ -62,8 +63,7 @@ const cart = useSelector(state =>state.cart)
           <li className='hideOnMobile'><Link to={'/AddProductPage'}>POST</Link></li>
           <li className='hideOnMobile dark' onClick={()=>dispatch(setTheme('black'))}><a href='#'>DARK</a></li>
           <li className='hideOnMobile' onClick={()=>dispatch(setTheme('white'))}><a href='#'>LIGHT</a></li>
-          <li><a href=""><i className="fa-solid fa-cart-shopping"></i> {cart.length}</a></li>
-          <li className='hideOnMobile'><a href="#">{users?.email}</a></li>
+          <li><a href=""><i className="fa-solid fa-cart-shopping"></i> {cart.length}</a> </li>  
           <li className='menuButton' onClick={showSideBar}><a href="#"><i className="fa-solid fa-bars"></i></a></li>
         </ul>
       </nav>
