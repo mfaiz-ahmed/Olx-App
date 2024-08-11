@@ -38,6 +38,10 @@ const dispatch = useDispatch()
 const cart = useSelector(state =>state.cart)
 
 
+const showCart =()=>{
+  <CartPopup />
+}
+
   return (
     <>
       <nav>
@@ -63,7 +67,7 @@ const cart = useSelector(state =>state.cart)
           <li className='hideOnMobile'><Link to={'/AddProductPage'}>POST</Link></li>
           <li className='hideOnMobile dark' onClick={()=>dispatch(setTheme('black'))}><a href='#'>DARK</a></li>
           <li className='hideOnMobile' onClick={()=>dispatch(setTheme('white'))}><a href='#'>LIGHT</a></li>
-          <li><a href=""><i className="fa-solid fa-cart-shopping"></i> {cart.length}</a> </li>  
+          <li><a href="" onClick={showCart}><i className="fa-solid fa-cart-shopping"></i> {cart.length}</a> </li>  
           <li className='menuButton' onClick={showSideBar}><a href="#"><i className="fa-solid fa-bars"></i></a></li>
         </ul>
       </nav>

@@ -373,3 +373,10 @@ nav a:hover {
 
 
   
+
+.cartPopup{
+  width: 250px;
+  background-color: white;
+  color: black;
+  font-size: 2rem;
+}
