@@ -46,6 +46,10 @@ nav ul {
 nav li {
   height: 50px;
   font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  cursor: pointer;
 }
 
 nav a {
@@ -54,11 +58,14 @@ nav a {
   display: flex;
   align-items: center;
   height: 100%;
-  padding: 0 25px;
 }
 
 nav li:first-child {
   margin-right: auto;
+}
+
+nav li:hover {
+  color: #72aec8;
 }
 
 nav a:hover {

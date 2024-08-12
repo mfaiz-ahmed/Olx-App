@@ -40,7 +40,7 @@ const dispatch = useDispatch()
         <h2 className="fw-bolder">Price: Rs. {product.price}</h2>
         <button onClick={()=>dispatch(addToCart(product))} className='button3'>ADD TO CART</button>
         <div className="text-center">
-        </div>
+        </div> 
         </div>
     </div>
     

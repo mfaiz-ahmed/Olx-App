@@ -1,8 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { persistStore, persistReducer } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
-import CartSlice from "./CartSlice";
-import ThemeSlice from './ThemeSlice'
+import rootReducer from "./rootReducer";
 
 const persistConfig = {
     key: 'root',
@@ -10,7 +9,7 @@ const persistConfig = {
   }
 
 
-const persistedReducer = persistReducer(persistConfig , CartSlice)
+const persistedReducer = persistReducer(persistConfig , rootReducer)
 
 
 const store = configureStore({
