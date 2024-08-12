@@ -36,7 +36,7 @@ const dispatch = useDispatch()
         <h1><span className='fw-bolder'>Brand:</span> {product.brand}</h1>
         <h1 className='mt-5'><span className='fw-bolder'>Title:</span> {product.title}</h1>
         <h1 className="mt-5"><span className='fw-bolder'>Category:</span> {product.category}</h1>
-        <h2 className="my-5"><span className='fw-bolder'>Details:</span> {product.details}</h2>
+        <h2 className="my-5 me-5"><span className='fw-bolder'>Details:</span> {product.details}</h2>
         <h2 className="fw-bolder">Price: Rs. {product.price}</h2>
         <button onClick={()=>dispatch(addToCart(product))} className='button3'>ADD TO CART</button>
         <div className="text-center">
