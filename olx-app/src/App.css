@@ -160,8 +160,8 @@ nav a:hover {
 
 .heading {
   text-align: center;
-  margin-top: 10rem;
-  margin-bottom: 5rem;
+  padding-top: 10rem;
+  padding-bottom: 5rem;
   font-size: 4rem;
   font-weight: 700;
 }
@@ -371,19 +371,4 @@ nav a:hover {
 
 .theme{
   background-color: white;
-}
-
-
-.itemsNumber{
-  padding-left: 1rem;
-}
-
-
-  
-
-.cartPopup{
-  width: 250px;
-  background-color: white;
-  color: black;
-  font-size: 2rem;
 }

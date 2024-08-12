@@ -8,7 +8,7 @@ import Footer from "../Components/Footer";
 import { useSelector } from "react-redux";
 
 export default function HomePage() {
-  const color = useSelector((state) => state.color);
+  const color = useSelector((state) => state.themeStore.color);
   return (
     <div
       style={{
