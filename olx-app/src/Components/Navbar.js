@@ -44,7 +44,7 @@ const cart = useSelector(state =>state.cartStore.cart)
         <ul className='sideBar'>
           <li onClick={hideSideBar}><i className="fa-solid fa-x"></i></li>
           <li>{users?.email}</li>
-          <li><Link to={'/HomePage'}>HOME</Link></li>
+          <li><Link to={'/'}>HOME</Link></li>
           <li><a href="#services">SERVICES</a></li>
           <li><a href="#products">PRODUCTS</a></li>
           <li><a href="#sale">SALE</a></li>
@@ -55,7 +55,7 @@ const cart = useSelector(state =>state.cartStore.cart)
         </ul>
         <ul>
           <li><img src={mainLogo} alt="Logo" /></li>
-          <li className='hideOnMobile'><Link to={'/HomePage'}>HOME</Link></li>
+          <li className='hideOnMobile'><Link to={'/'}>HOME</Link></li>
           <li className='hideOnMobile'><a href="#services">SERVICES</a></li>
           <li className='hideOnMobile'><a href="#products">PRODUCTS</a></li>
           <li className='hideOnMobile'><a href="#sale">SALE</a></li>

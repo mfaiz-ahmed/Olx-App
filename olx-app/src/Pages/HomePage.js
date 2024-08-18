@@ -6,6 +6,7 @@ import SalePart from "../Components/SalePart";
 import Blog from "../Components/Blog";
 import Footer from "../Components/Footer";
 import { useSelector } from "react-redux";
+import CartPopup from "../Components/CartPopup";
 
 export default function HomePage() {
   const color = useSelector((state) => state.themeStore.color);
@@ -18,6 +19,7 @@ export default function HomePage() {
       <Navbar />
       <Carousel />
       <Services />
+      <CartPopup/>
       <Products />
       <SalePart />
       <Blog />
