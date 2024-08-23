@@ -10,6 +10,7 @@ export default function ProductDetail() {
   const [product , setProduct] = useState({})
 
 
+
   useEffect(()=>{
     const getProductData = async ()=>{
       const singleProduct = doc(db , 'products' , params.id)
@@ -23,12 +24,17 @@ export default function ProductDetail() {
     }
     getProductData()
   } , [params.id])
+  
 
 const dispatch = useDispatch()
 
+
+
+
+
   return (
     <div className="container mt-5 pt-5 mb-5 pb-5">
-    <div className="container d-flex mt-5 p-5 border shadow">
+    <div key={params.id} className="container d-flex mt-5 p-5 border shadow">
       <div>
         <img className="border shadow p-4" width={500} src={product.image} alt="Product Image" />
       </div>
@@ -38,7 +44,7 @@ const dispatch = useDispatch()
         <h1 className="mt-5"><span className='fw-bolder'>Category:</span> {product.category}</h1>
         <h2 className="my-5 me-5"><span className='fw-bolder'>Details:</span> {product.details}</h2>
         <h2 className="fw-bolder">Price: Rs. {product.price}</h2>
-        <button onClick={()=>dispatch(addToCart(product))} className='button3'>ADD TO CART</button>
+        <button onClick={()=>dispatch(addToCart(product(params.id)))} className='button3'>ADD TO CART</button>
         <div className="text-center">
         </div> 
         </div>

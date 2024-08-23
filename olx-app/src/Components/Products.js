@@ -23,6 +23,10 @@ export default function Products() {
     navigate(`/Detail/${item.id}`);
   };
 
+
+  console.log( 'products' , products);
+  
+  
   return (
     <div id="products">
       <h1 id="products" className="heading">

@@ -36,6 +36,11 @@ const dispatch = useDispatch()
 
 const cart = useSelector(state =>state.cartStore.cart)
 
+const showCart = ()=>{
+  const cart = document.querySelector('.cartPopup')
+  cart.style.display = 'block'
+}
+
 
 
   return (
@@ -63,7 +68,7 @@ const cart = useSelector(state =>state.cartStore.cart)
           <li className='hideOnMobile'><Link to={'/AddProductPage'}>POST</Link></li>
           <li className='hideOnMobile dark' onClick={()=>dispatch(setTheme('black'))}>DARK</li>
           <li className='hideOnMobile' onClick={()=>dispatch(setTheme('white'))}>LIGHT</li>
-          <li><i className="fa-solid fa-cart-shopping"></i> {cart.length}</li>         
+          <li onClick={showCart}><i className="fa-solid fa-cart-shopping"></i> {cart.length}</li>         
           <li className='menuButton' onClick={showSideBar}><i className="fa-solid fa-bars"></i></li>
         </ul>
       </nav>

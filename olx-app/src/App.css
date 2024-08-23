@@ -385,6 +385,7 @@ nav a:hover {
   width: 500px;
   height: 100%;
   overflow:scroll;
+  display: none;
 }
 
 
@@ -393,3 +394,13 @@ nav a:hover {
   inline-block;
   padding: 10px;
 }
+
+
+
+.cross{
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.cross:hover{color: #72aec8;}
